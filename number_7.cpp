@@ -3,11 +3,10 @@
 
 using namespace std;
 
-list<int> reverseNum(list<int> m) {
+void reverseNum(list<int> &m) {
     for(auto it = m.begin(); it != m.end(); ++it) {
         m.insert(it, -(*it));
     }
-    return m;
 }
 
 int main(){
@@ -20,7 +19,7 @@ int main(){
         cin >> x;
         l.push_back(x);
     }
-    l = reverseNum(l);
+    reverseNum(l);
     for(auto it = l.begin(); it != l.end(); it++) {
         cout << *it << endl;
     }
