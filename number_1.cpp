@@ -25,6 +25,6 @@ int main(){
 
     vector<int>::iterator it = Find(v.begin(), v.end(), el);
     cout << "Result: ";
-    cout << *it << endl;
+    cout << it - v.begin() << endl;
   return 0;
 }
